@@ -12,12 +12,15 @@
   background-color: $medium-grey;
   border-radius: 10px;
   box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.35);
+  max-width: 350px;
   padding: 20px;
-  width: 250px;
+  width: 75%;
 }
 
 .auth__title {
-  color: $primary;
+  color: $terciary;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 form {
@@ -35,28 +38,14 @@ form {
       outline: none;
     }
   }
+  button {
+    margin-top: 10px;
+  }
   a {
     color: $primary;
     display: inline-block;
     margin-top: 25px;
     position: relative;
-    text-decoration: none;
-
-    &:after {
-      background-color: $primary;
-      display: block;
-      content: "";
-      height: 2px;
-      margin-top: 2px;
-      transform: scaleX(0);
-      transition: all 0.4s ease-in-out;
-      width: 100;
-    }
-    &:hover {
-      &:after {
-        transform: scaleX(1);
-      }
-    }
   }
 }
 
