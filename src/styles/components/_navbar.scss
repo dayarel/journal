@@ -1,0 +1,45 @@
+.navbar__main {
+  align-items: center;
+  background-color: $darker-grey;
+  box-shadow: 1px 8px 22px 2px rgba(0, 0, 0, 0.25) inset;
+  display: flex;
+  justify-content: space-between;
+  height: 55px;
+  padding: 0 25px;
+  .navbar__navbar-brand {
+    img {
+      width: 95px;
+    }
+  }
+  p {
+    color: darken(white, 40%);
+  }
+  .navbar__user {
+    display: flex;
+    align-items: center;
+    .navbar__navbar-avatar {
+      border: 3px solid $primary;
+      border-radius: 50%;
+      height: 40px;
+      overflow: hidden;
+      width: 40px;
+      img {
+        max-width: 100%;
+      }
+    }
+    button {
+      background-color: $primary;
+      border: 0;
+      border-radius: 20px;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      height: 40px;
+      letter-spacing: 1.1px;
+      margin-left: 15px;
+      text-transform: uppercase;
+      width: 115px;
+    }
+  }
+}
