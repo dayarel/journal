@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./styles/styles.scss";
 const JournalApp = () => {
   return (
     <div>
