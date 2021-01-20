@@ -3,6 +3,7 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -33,4 +34,10 @@ main {
 
 .pointer {
   cursor: pointer;
+}
+
+.skew-dark {
+  border-radius: 50px;
+  background: #454953;
+  box-shadow: inset 17px 17px 34px #3b3e47, inset -17px -17px 34px #4f545f;
 }

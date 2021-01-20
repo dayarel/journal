@@ -1,0 +1,59 @@
+.btn {
+  border-radius: 50px;
+  box-shadow: 2.5px 2.5px 7.5px #3b3e47, -2.5px -2.5px 7.5px#4f545f;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 115px;
+  height: 35px;
+
+  &-primary {
+    background: linear-gradient(to left top, $primary, darken($primary, 10%));
+    border: 1px solid lighten($primary, 10%);
+    transition: all 0.25s ease-in;
+    // &:disabled {
+    //   background: lighten($primary, 20%);
+    // }
+    // &:hover {
+    //   background: darken($primary, 20%);
+    //   border: none;
+    // }
+  }
+  &-block {
+    width: 100%;
+  }
+}
+
+.google-btn {
+  align-items: center;
+  background-color: $primary;
+  border-radius: 10px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  display: flex;
+  margin-top: 5px;
+  height: 40px;
+  transition: box-shadow 0.3s ease;
+  width: 100%;
+
+  .google-icon-wrapper {
+    align-items: center;
+    border-radius: 10px 0 0 10px;
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    .google-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  .btn-text {
+    color: $white;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    margin-left: 10px;
+  }
+}
