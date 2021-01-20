@@ -9,14 +9,14 @@ const LoginScreen = () => {
         <input
           type="text"
           className="auth__input skew-dark"
-          placheolder="youremail@email.com"
+          placeholder="Your Email"
           name="email"
           autoComplete="off"
         />
         <input
           type="password"
           className="auth__input skew-dark"
-          placheolder="Password"
+          placeholder="Password"
           name="password"
         />
         <button type="submit" className="btn btn-primary btn-block">
@@ -37,7 +37,9 @@ const LoginScreen = () => {
             </p>
           </div>
         </div>
-        <Link to="/auth/register">Create new account</Link>
+        <Link className="link animated__underline" to="/auth/register">
+          Create new account
+        </Link>
       </form>
     </>
   );
