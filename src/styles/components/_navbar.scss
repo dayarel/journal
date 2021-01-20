@@ -13,6 +13,10 @@
   }
   p {
     color: darken(white, 40%);
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+    }
   }
   .navbar__user {
     display: flex;
