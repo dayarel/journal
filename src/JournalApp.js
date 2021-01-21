@@ -1,8 +1,15 @@
 import React from "react";
-import "./styles/styles.scss";
+import { Provider } from "react-redux";
 import AppRouter from "./routers/AppRouter";
+import { store } from "./store/store";
+import "./styles/styles.scss";
+
 const JournalApp = () => {
-  return <AppRouter />;
+  return (
+    <Provider store={store}>
+      <AppRouter />
+    </Provider>
+  );
 };
 
 export default JournalApp;
