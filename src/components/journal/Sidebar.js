@@ -16,7 +16,9 @@ const Sidebar = () => {
         <p className="mt-5">New entry</p>
       </div>
       <JournalEntries />
-      <div className="sidebar__sidebar-hide"></div>
+      <div className="sidebar__sidebar-hide">
+        <i class="fa fa-chevron-left fa-1x" aria-hidden="true"></i>
+      </div>
     </aside>
   );
 };
