@@ -17,7 +17,7 @@ const Sidebar = () => {
       </div>
       <JournalEntries />
       <div className="sidebar__sidebar-hide">
-        <i class="fa fa-chevron-left fa-1x" aria-hidden="true"></i>
+        <i className="fa fa-chevron-left fa-1x" aria-hidden="true"></i>
       </div>
     </aside>
   );
