@@ -11,7 +11,6 @@ export const uiReducer = (state = initialState, action) => {
         ...initialState,
         msgError: action.payload,
       };
-      break;
     case types.uiRemoveError:
       return {
         ...initialState,

@@ -19,7 +19,7 @@ const NoteScreen = () => {
         <div className="notes__image">
           <img
             src="https://th.bing.com/th/id/Rdda57ca26e59b9ec3ba87b8b5749ae27?rik=M3lT9rzLHqEGUw&riu=http%3a%2f%2fwww.fodors.com%2fimages%2fitineraries%2fzurich-night.jpg&ehk=kKkRibbcJ6q6AO0FuqU%2feDOnSQPnlSCQLFBYor7PfII%3d&risl=&pid=ImgRaw"
-            alt="Some awesome image"
+            alt="Some awesome pic"
           />
         </div>
       </div>
