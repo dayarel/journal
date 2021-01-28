@@ -9,6 +9,22 @@ export const startLoginEmailPassword = (email, password) => {
   };
 };
 
+export const startRegisterWithEmailPasswordName = (email, password, name) => {
+  return (dispatch) => {
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then(async ({ user }) => {
+        await user.updateProfile({
+          displayName: name,
+          photoURL:
+            "https://banner2.cleanpng.com/20180904/vji/kisspng-avatar-image-computer-icons-likengo-usertesting-index-5b8ec1242fdcf5.6000571015360822121961.jpg",
+        });
+        dispatch(login(user.uid, user.displayName, user.photoURL));
+      });
+  };
+};
+
 export const startGoogleLogin = () => {
   return (dispatch) => {
     firebase
@@ -16,7 +32,8 @@ export const startGoogleLogin = () => {
       .signInWithPopup(googleAuthProvider)
       .then(({ user }) => {
         dispatch(login(user.uid, user.displayName, user.photoURL));
-      });
+      })
+      .catch((err) => console.log(err));
   };
 };
 
