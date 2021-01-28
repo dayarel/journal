@@ -65,7 +65,7 @@ const LoginScreen = () => {
         </button>
         <div className="auth__social-networks" onClick={handleGoogleLogin}>
           <p>Login with social networks</p>
-          <div className="google-btn">
+          <div className="google-btn" onClick={handleGoogleLogin}>
             <div className="google-icon-wrapper">
               <img
                 className="google-icon"

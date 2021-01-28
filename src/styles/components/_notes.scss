@@ -26,28 +26,19 @@
     .notes__title-input,
     .notes__text-area {
       border: none;
-      color: lighten($light-grey, 65%);
-      font-size: 18px;
+      border-bottom: 1px solid #595f69;
+      color: $primary;
+      font-size: 16px;
       padding: 15px;
-      ::-webkit-input-placeholder {
-        color: lighten($light-grey, 65%);
-      }
-      ::-moz-placeholder {
-        color: lighten($light-grey, 65%);
-      }
-      :-ms-input-placeholder {
-        color: lighten($light-grey, 65%);
-      }
-      :-moz-placeholder {
-        color: lighten($light-grey, 65%);
-      }
+
       &:focus {
         outline: none;
       }
     }
     .notes__title-input {
       border-radius: 25px;
-      height: 45px;
+      height: 35px;
+      padding-left: 15px;
     }
     .notes__text-area {
       border: none;
