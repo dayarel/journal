@@ -8,13 +8,23 @@ export const uiReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.uiSetError:
       return {
-        ...initialState,
+        ...state,
         msgError: action.payload,
       };
     case types.uiRemoveError:
       return {
-        ...initialState,
+        ...state,
         msgError: null,
+      };
+    case types.uiStartLoading:
+      return {
+        ...state,
+        loading: true,
+      };
+    case types.uiFinishLoading:
+      return {
+        ...state,
+        loading: false,
       };
     default:
       return state;

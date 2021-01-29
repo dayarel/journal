@@ -7,9 +7,9 @@ import { setError, removeError } from "../../actions/ui";
 import { useForm } from "../../hooks/useForm";
 const LoginScreen = () => {
   const dispatch = useDispatch();
-  const { msgError } = useSelector((state) => state.ui);
+  const { msgError, loading } = useSelector((state) => state.ui);
   const [formValues, handleInputChange] = useForm({
-    email: "david@gmail.com",
+    email: "dayarel@gmail.com",
     password: "123456",
   });
 
@@ -60,7 +60,11 @@ const LoginScreen = () => {
           value={password}
           onChange={handleInputChange}
         />
-        <button type="submit" className="btn btn-primary btn-block">
+        <button
+          type="submit"
+          className="btn btn-primary btn-block"
+          disabled={loading}
+        >
           Login
         </button>
         <div className="auth__social-networks" onClick={handleGoogleLogin}>
