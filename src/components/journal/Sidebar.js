@@ -1,12 +1,14 @@
 import React from "react";
-import avatar from "../../images/avatar.jpg";
 import JournalEntries from "./JournalEntries";
+import { useSelector } from "react-redux";
+
 const Sidebar = () => {
+  const { name, photo } = useSelector((state) => state.auth);
   return (
     <aside className="sidebar__sidebar-wrapper">
       <div className="sidebar__user-info">
-        <img src={avatar} alt="User Avatar" />
-        <h1>David Cortes</h1>
+        <img src={photo} alt="User Avatar" />
+        <h1>{name}</h1>
         <h2>
           <span>5</span> entries added
         </h2>

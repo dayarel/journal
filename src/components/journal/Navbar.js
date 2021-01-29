@@ -1,7 +1,9 @@
 import React from "react";
 import logo from "../../images/journal_logo.svg";
-import avatar from "../../images/avatar.jpg";
+import { useSelector } from "react-redux";
+
 const Navbar = () => {
+  const { photo } = useSelector((state) => state.auth);
   return (
     <nav className="navbar__main">
       <div className="navbar__navbar-brand">
@@ -10,7 +12,7 @@ const Navbar = () => {
       <p>WELCOME TO YOUR PERSONAL JOURNAL APP</p>
       <div className="navbar__user">
         <div className="navbar__navbar-avatar">
-          <img src={avatar} alt="User Avatar" />
+          <img src={photo} alt="User Avatar" />
         </div>
         <button>Logout</button>
       </div>
