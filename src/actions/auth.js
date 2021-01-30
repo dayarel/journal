@@ -46,8 +46,7 @@ export const startGoogleLogin = () => {
       .signInWithPopup(googleAuthProvider)
       .then(({ user }) => {
         dispatch(login(user.uid, user.displayName, user.photoURL));
-      })
-      .catch((e) => Swal.fire("Error", e.message, "error"));
+      });
   };
 };
 
