@@ -1,9 +1,15 @@
 import React from "react";
 import logo from "../../images/journal_logo.svg";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { startLogout } from "../../actions/auth";
 
 const Navbar = () => {
   const { photo } = useSelector((state) => state.auth);
+
+  const dispatch = useDispatch();
+  const handleLogout = () => {
+    dispatch(startLogout());
+  };
   return (
     <nav className="navbar__main">
       <div className="navbar__navbar-brand">
@@ -14,7 +20,7 @@ const Navbar = () => {
         <div className="navbar__navbar-avatar">
           <img src={photo} alt="User Avatar" />
         </div>
-        <button>Logout</button>
+        <button onClick={handleLogout}>Logout</button>
       </div>
     </nav>
   );

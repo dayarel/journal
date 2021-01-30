@@ -55,3 +55,14 @@ export const login = (uid, displayName, photoURL) => ({
     photoURL,
   },
 });
+
+export const startLogout = () => {
+  return async (dispatch) => {
+    await firebase.auth().signOut();
+    dispatch(logout());
+  };
+};
+
+export const logout = () => ({
+  type: types.logout,
+});
