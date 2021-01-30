@@ -28,6 +28,8 @@
       overflow: hidden;
       width: 40px;
       img {
+        border: 1px solid $darker-grey;
+        border-radius: 50%;
         max-width: 100%;
       }
     }

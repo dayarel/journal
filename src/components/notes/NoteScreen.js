@@ -9,12 +9,12 @@ const NoteScreen = () => {
         <input
           type="text"
           placeholder="Some awesome title"
-          className="notes__title-input skew-light"
+          className="notes__title-input"
           autoComplete="off"
         />
         <textarea
           placeholder="What did you do today?"
-          className="notes__text-area skew-light"
+          className="notes__text-area"
         />
         <div className="notes__image">
           <img

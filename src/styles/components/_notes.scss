@@ -10,8 +10,9 @@
     justify-content: space-between;
     padding: 10px 20px;
     button {
-      background-color: darken($dark-grey, 10%);
+      background: linear-gradient(145deg, #31343b, #292c32);
       border: none;
+      box-shadow: 5px 5px 9px #272a2f, -5px -5px 9px #35383f;
       color: $light-grey;
       & + button {
         margin-left: 25px;
@@ -26,11 +27,11 @@
     .notes__title-input,
     .notes__text-area {
       border: none;
-      border-bottom: 1px solid #595f69;
       color: $primary;
       font-size: 16px;
       padding: 15px;
-
+      background: $light-grey;
+      box-shadow: 6px 6px 11px #4c5159, -6px -6px 11px #666d79;
       &:focus {
         outline: none;
       }
@@ -43,7 +44,6 @@
     .notes__text-area {
       border: none;
       border-radius: 25px;
-
       flex: 1 1 auto;
       margin-top: 25px;
       resize: none;
