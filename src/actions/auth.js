@@ -1,6 +1,7 @@
 import { firebase, googleAuthProvider } from "../firebase/firebase-config";
 import { types } from "../types/types";
 import { startLoading, finishLoading } from "./ui";
+import Swal from "sweetalert2";
 
 export const startLoginEmailPassword = (email, password) => {
   return (dispatch) => {
@@ -12,9 +13,9 @@ export const startLoginEmailPassword = (email, password) => {
         dispatch(login(user.uid, user.displayName, user.photoURL));
         dispatch(finishLoading());
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((e) => {
         dispatch(finishLoading());
+        Swal.fire("Error", e.message, "error");
       });
   };
 };
@@ -31,6 +32,9 @@ export const startRegisterWithEmailPasswordName = (email, password, name) => {
             "https://banner2.cleanpng.com/20180904/vji/kisspng-avatar-image-computer-icons-likengo-usertesting-index-5b8ec1242fdcf5.6000571015360822121961.jpg",
         });
         dispatch(login(user.uid, user.displayName, user.photoURL));
+      })
+      .catch((e) => {
+        Swal.fire("Error", e.message, "error");
       });
   };
 };
@@ -43,7 +47,7 @@ export const startGoogleLogin = () => {
       .then(({ user }) => {
         dispatch(login(user.uid, user.displayName, user.photoURL));
       })
-      .catch((err) => console.log(err));
+      .catch((e) => Swal.fire("Error", e.message, "error"));
   };
 };
 
