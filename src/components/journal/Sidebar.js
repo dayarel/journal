@@ -1,9 +1,16 @@
 import React from "react";
 import JournalEntries from "./JournalEntries";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { startNewNote } from "../../actions/notes";
 
 const Sidebar = () => {
+  const dispatch = useDispatch();
   const { name, photo } = useSelector((state) => state.auth);
+
+  const handleAddNew = () => {
+    dispatch(startNewNote());
+  };
+
   return (
     <aside className="sidebar__sidebar-wrapper">
       <div className="sidebar__user-info">
@@ -13,7 +20,7 @@ const Sidebar = () => {
           <span>5</span> entries added
         </h2>
       </div>
-      <div className="sidebar__new-entry">
+      <div className="sidebar__new-entry" onClick={handleAddNew}>
         <i className="far fa-calendar-plus fa-5x"></i>
         <p className="mt-5">New entry</p>
       </div>
