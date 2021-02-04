@@ -1,26 +1,27 @@
 import React from "react";
-const JournalEntry = ({ value }) => {
+import moment from "moment";
+const JournalEntry = ({ id, date, title, body, url }) => {
+  const noteDate = moment(date);
   return (
     <div className="sidebar__entry">
-      <div
-        className="sidebar__entry-picture"
-        style={{
-          backgroundImage:
-            "url(https://s27363.pcdn.co/wp-content/uploads/2019/11/Zurich-for-Facebook.jpg.optimal.jpg",
-          backgroundSize: "cover",
-        }}
-      ></div>
+      {url && (
+        <div
+          className="sidebar__entry-picture"
+          style={{
+            backgroundImage: `url(${url})`,
+            backgroundSize: "cover",
+          }}
+        ></div>
+      )}
       <div className="sidebar__entry-wrapper">
         <div className="sidebar__entry-body">
-          <p className="sidebar__entry-title">A new day</p>
-          <p className="sidebar__entry-content">
-            Mark showed me some Manchester snowy videos. I hate him!
-          </p>
+          <p className="sidebar__entry-title">{title}</p>
+          <p className="sidebar__entry-content">{body}</p>
         </div>
         <div className="sidebar__separator"></div>
         <div className="sidebar__entry-date">
-          <span>Monday</span>
-          <h4>28</h4>
+          <span>{noteDate.format("ddd")}</span>
+          <h4>{noteDate.format("D")}</h4>
         </div>
       </div>
     </div>
