@@ -7,8 +7,7 @@ import PublicRoute from "./PublicRoute";
 import { firebase } from "../firebase/firebase-config";
 import JournalScreen from "../components/journal/JournalScreen";
 import { login } from "../actions/auth";
-import { loadNotes } from "../helpers/loadNotes";
-import { setNotes } from "../actions/notes";
+import { startLoadingNotes } from "../actions/notes";
 
 const AppRouter = () => {
   const dispatch = useDispatch();
@@ -21,8 +20,7 @@ const AppRouter = () => {
         dispatch(login(user.uid, user.displayName, user.photoURL));
         setIsLoggedIn(true);
 
-        const notes = await loadNotes(user.uid);
-        dispatch(setNotes(notes));
+        dispatch(startLoadingNotes(user.uid));
       } else {
         setIsLoggedIn(false);
       }
